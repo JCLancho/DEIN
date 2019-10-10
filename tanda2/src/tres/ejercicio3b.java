@@ -44,7 +44,7 @@ public class ejercicio3b extends JFrame {
 	 * Create the frame.
 	 */
 	public ejercicio3b() {
-		setTitle("JList Demo");
+		setTitle("Rango multiple");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 304, 300);
 		contentPane = new JPanel();
