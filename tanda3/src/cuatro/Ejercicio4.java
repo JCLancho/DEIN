@@ -26,8 +26,6 @@ import java.awt.FlowLayout;
 import javax.swing.SwingConstants;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.DefaultComboBoxModel;
-import java.awt.Component;
-import javax.swing.Box;
 import javax.swing.JSeparator;
 
 public class Ejercicio4 extends JFrame {
