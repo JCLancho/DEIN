@@ -28,6 +28,7 @@ public class Ejercicio2 extends JFrame {
 				try {
 					Ejercicio2 frame = new Ejercicio2();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

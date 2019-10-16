@@ -29,6 +29,7 @@ public class Jtable extends JFrame {
 				try {
 					Jtable frame = new Jtable();
 					frame.setVisible(true);
+					frame.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
