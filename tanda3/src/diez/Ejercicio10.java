@@ -29,6 +29,7 @@ public class Ejercicio10 extends JFrame {
 		});
 	}
 
+	
 	/**
 	 * Create the frame.
 	 */
