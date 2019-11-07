@@ -87,16 +87,16 @@ public class Ejercicio3g extends JFrame {
 		JLabel lblEspecialidad = new JLabel("Elige tu especialidad");
 		contentPane.add(lblEspecialidad);
 		
-		JCheckBox checkProgramacion = new JCheckBox("Programaci贸n");
+		JCheckBox checkProgramacion = new JCheckBox("Programaci髇");
 		contentPane.add(checkProgramacion);
 		
-		JCheckBox checkDise帽o = new JCheckBox("Dise帽o gr谩fico");
-		contentPane.add(checkDise帽o);
+		JCheckBox checkDiseno = new JCheckBox("Dise駉 gr醘ico");
+		contentPane.add(checkDiseno);
 		
-		JCheckBox checkAdministraci贸n = new JCheckBox("Administraci贸n");
-		contentPane.add(checkAdministraci贸n);
+		JCheckBox checkAdministracion = new JCheckBox("Administraci髇");
+		contentPane.add(checkAdministracion);
 		
-		JCheckBox[] checks = {checkAdministraci贸n,checkDise帽o,checkProgramacion};
+		JCheckBox[] checks = {checkAdministracion,checkDiseno,checkProgramacion};
 		
 		JSeparator separator_1 = new JSeparator();
 		contentPane.add(separator_1);
