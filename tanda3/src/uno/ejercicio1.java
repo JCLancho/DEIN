@@ -64,7 +64,7 @@ public class ejercicio1 extends JFrame {
 		setResizable(false);
 		setTitle("Datos Personales");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(580, 650);
+		setSize(650, 650);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

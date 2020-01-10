@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="InformeProductos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="953954fb-b8d2-4bf1-99da-2936f79bd600">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BBDD"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select *
+from productos]]>
+	</queryString>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<field name="producto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="producto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<field name="precio" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="precio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<field name="seccion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="seccion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<field name="estanteria" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estanteria"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<field name="disponible" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="disponible"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="productos"/>
+	</field>
+	<variable name="sumaPrecios" class="java.lang.Float" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{precio}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76">
+			<staticText>
+				<reportElement x="444" y="0" width="86" height="20" uuid="01364b0e-83ab-445d-a914-8a9772459c8a"/>
+				<text><![CDATA[Pastelitos S.A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="20" width="100" height="20" uuid="a340a86d-d339-4e09-9dce-c42c4e6e2512"/>
+				<text><![CDATA[Av. del Dulce s/n]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="80" height="70" uuid="25417ba9-83fd-48e5-a2f8-93ecde18eef3"/>
+				<imageExpression><![CDATA["/libs/pastelitos_logo.png"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="444" y="40" width="105" height="20" uuid="647cec82-909d-43f9-9aa8-4ab8a47eb8dd"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="54">
+			<staticText>
+				<reportElement x="19" y="30" width="510" height="16" uuid="444d7909-39c9-4242-8677-b4bb7ae2a9f5"/>
+				<text><![CDATA[Informe de los  productos  que  hay  en  el  mercado  y  calcular  el  precio  total  de  los productos.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="15" width="100" height="30" uuid="4c08065c-622d-423a-9275-b90b1909efd5"/>
+				<text><![CDATA[Productos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="15" width="100" height="30" uuid="904f8645-5c92-4054-acf1-59f2538c0701"/>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="19" y="5" width="100" height="30" uuid="751f5548-e20f-47d9-bb3b-b2852e229a54"/>
+				<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="5" width="100" height="30" uuid="6c989397-c774-4044-bf47-0e8d99a23cac"/>
+				<textFieldExpression><![CDATA[$F{precio} + " €"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="130" y="10" width="300" height="4" forecolor="#A3DCFF" uuid="4a9f7084-a188-41f3-b31a-3f36bfab1bdd"/>
+			</rectangle>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="460" y="10" width="100" height="30" uuid="3b0af106-31f8-4776-b24a-4407e3ace265"/>
+				<textFieldExpression><![CDATA["Total: " +  $V{sumaPrecios} + " €"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="64">
+			<textField>
+				<reportElement x="180" y="25" width="100" height="30" uuid="58c8373d-4d6b-4960-b550-f39c60495529"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="280" y="25" width="100" height="30" uuid="d3c46d6c-76e7-46a8-902d-9b48035f3afa"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
